@@ -28,3 +28,9 @@ $router->post('/admin/categories', 'CategoryController@store');
 $router->get('/admin/category/{id}', 'CategoryController@show');
 $router->put('/admin/category/{id}', 'CategoryController@update');
 $router->delete('/admin/category/{id}', 'CategoryController@destroy');
+
+$router->get('/admin/products', 'ProductController@index');
+$router->post('/admin/products', 'ProductController@store');
+$router->get('/admin/product/{id}', 'ProductController@show');
+$router->put('/admin/product/{id}', 'ProductController@update');
+$router->delete('/admin/product/{id}', 'ProductController@destroy');
