@@ -11,6 +11,11 @@ class CategoriesPostController extends Controller
     {
         $categoriespost = CategoriesPost::get();
 
+        $output = [
+            "message" => "categoriespost",
+            "result" => $categoriespost
+        ];
+
         return response()->json($categoriespost, 200);
     }
 
@@ -24,7 +29,6 @@ class CategoriesPostController extends Controller
     public function store()
     {
         $attr = request()->all();
-        $attr['slug'] = Str::slug(request('name'));
         $categoriespost = CategoriesPost::create($attr);
 
         return response()->json($categoriespost, 200);
@@ -35,19 +39,22 @@ class CategoriesPostController extends Controller
         $categoriespost = CategoriesPost::find($id);
 
         $categoriespost->name = request('name');
-        $categoriespost->slug = Str::slug(request('name'));
 
         $categoriespost->save;
 
         return response()->json($categoriespost, 200);
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
-        $categoriespost = CategoriesPost::find($id);
+        $categorypost = CategoriesPost::find($id);
 
-        $categoriespost->delete();
-        $message = ['message' => 'delete successfully', 'Categoriespost_id' => $id];
+        if (!$categorypost) {
+            abort(404);
+        }
+
+        $categorypost->delete();
+        $message = ['message' => 'delete successfully', 'categorypost_id' => $id];
         return response()->json($message, 200);
     }
 }

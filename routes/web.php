@@ -35,7 +35,6 @@ $router->get('/admin/product/{id}', 'ProductController@show');
 $router->put('/admin/product/{id}', 'ProductController@update');
 $router->delete('/admin/product/{id}', 'ProductController@destroy');
 
-<<<<<<< HEAD
 $router->get('/admin/users', 'UserController@index');
 $router->post('/admin/users', 'UserController@store');
 $router->get('/admin/user/{id}', 'UserController@show');
@@ -47,10 +46,9 @@ $router->post('/admin/categoriesposts', 'CategoriesPostController@store');
 $router->get('/admin/categoriesposts/{id}', 'CategoriesPostController@show');
 $router->put('/admin/categoriesposts/{id}', 'CategoriesPostController@update');
 $router->delete('/admin/categoriesposts/{id}', 'CategoriesPostController@destroy');
-=======
+
 $router->get('/admin/comments', 'CommentController@index');
 $router->post('/admin/comments', 'CommentController@store');
 $router->get('/admin/comment/{id}', 'CommentController@show');
 $router->put('/admin/comment/{id}', 'CommentController@update');
 $router->delete('/admin/comment/{id}', 'CommentController@destroy');
->>>>>>> 069361a7bf95f573205ef6db8971d46fb20c317c

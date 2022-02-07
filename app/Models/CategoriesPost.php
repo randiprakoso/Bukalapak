@@ -10,7 +10,7 @@ class CategoriesPost extends Model
     use HasFactory;
 
     protected $fillable = [
-        'categories_id', 'product_id',
+        'category_id', 'product_id',
     ];
 
     public $timestamps = true;
