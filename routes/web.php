@@ -40,3 +40,9 @@ $router->post('/admin/users', 'UserController@store');
 $router->get('/admin/user/{id}', 'UserController@show');
 $router->put('/admin/user/{id}', 'UserController@update');
 $router->delete('/admin/user/{id}', 'UserController@destroy');
+
+$router->get('/admin/categoriesposts', 'CategoriesPostController@index');
+$router->post('/admin/categoriesposts', 'CategoriesPostController@store');
+$router->get('/admin/categoriesposts/{id}', 'CategoriesPostController@show');
+$router->put('/admin/categoriesposts/{id}', 'CategoriesPostController@update');
+$router->delete('/admin/categoriesposts/{id}', 'CategoriesPostController@destroy');
