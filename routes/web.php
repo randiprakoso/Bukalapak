@@ -34,3 +34,9 @@ $router->post('/admin/products', 'ProductController@store');
 $router->get('/admin/product/{id}', 'ProductController@show');
 $router->put('/admin/product/{id}', 'ProductController@update');
 $router->delete('/admin/product/{id}', 'ProductController@destroy');
+
+$router->get('/admin/comments', 'CommentController@index');
+$router->post('/admin/comments', 'CommenttController@store');
+$router->get('/admin/comment/{id}', 'CommentController@show');
+$router->put('/admin/comment/{id}', 'CommentController@update');
+$router->delete('/admin/comment/{id}', 'CommentController@destroy');
